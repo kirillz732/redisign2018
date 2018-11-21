@@ -2,7 +2,9 @@
   display: flex;
   background: #d8d8d8;
 
-  
+  &__icons{
+    margin-left: auto;
+  }
 
   &--vk{
     width: 17px;
