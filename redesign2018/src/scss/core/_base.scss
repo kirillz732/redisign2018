@@ -1,0 +1,71 @@
+body {
+  @extend %source-sans-pro-regular;
+
+  background: $bg-color;
+  color: $text-color;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  @extend %museo-slab-500;
+
+  font-size: 3rem;
+}
+
+h2 {
+  @extend %museo-sans-900;
+
+  font-size: 2rem;
+}
+
+a {
+  color: $links-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $links-color-active;
+    border-color: $links-color-active;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  @extend %museo-sans-500;
+
+  margin: 0;
+  padding: $input-padding;
+  outline: none;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #e5e5e5;
+}
+
+button {
+  @extend %museo-sans-900;
+
+  color: $btn-font-color;
+  border: none;
+  border-radius: $btn-border-radius;
+  background-color: $btn-blue-bgr-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btn-blue-bgr-hover;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,166 @@
+// Mixins & Extends
+
+// Fonts
+%source-sans-pro-regular {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 400;
+    style: normal;
+  }
+}
+
+%source-sans-pro-semibold {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 600;
+    style: normal;
+  }
+}
+
+%source-sans-pro-bold {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 700;
+    style: normal;
+  }
+}
+
+@mixin source-sans-pro-bold {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 700;
+    style: normal;
+  }
+}
+
+%source-sans-pro-black {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 900;
+    style: normal;
+  }
+}
+
+@mixin source-sans-pro-black {
+  font: {
+    family: "Source Sans Pro", Arial, sans-serif;
+    weight: 900;
+    style: normal;
+  }
+}
+
+%museo-slab-500 {
+  font: {
+    family: "Museo Slab", Georgia, serif;
+    weight: 500;
+    style: normal;
+  }
+}
+
+%museo-sans-500 {
+  font: {
+    family: "Museo Sans", Arial, sans-serif;
+    weight: 500;
+    style: normal;
+  }
+}
+
+
+%museo-sans-900 {
+  font: {
+    family: "Museo Sans", Arial, sans-serif;
+    weight: 900;
+    style: normal;
+  }
+}
+
+@mixin museo-sans-500 {
+  font: {
+    family: "Museo Sans", Arial, sans-serif;
+    weight: 900;
+    style: normal;
+  }
+}
+
+// Layout related stuff
+.clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Responsive Breakpoints
+// Phones only
+@mixin phone () {
+  @media only screen and (max-width: $viewport-phone-max) {
+    @content;
+  }
+}
+
+// Retina only
+@mixin phone-retina () {
+  @media only screen  and (max-width: $viewport-phone-max) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+// Not Phones only
+@mixin not-phone () {
+  @media only screen and (min-width: $viewport-tablet-portrait-min) {
+    @content;
+  }
+}
+
+// Tablets only
+@mixin tablets () {
+  @media only screen and (min-width: $viewport-tablet-portrait-min) and (max-width: $viewport-tablet-landscape-max) {
+    @content;
+  }
+}
+
+// Tablets Portrait only
+@mixin tablet-portrait () {
+  @media only screen and (min-width: $viewport-tablet-portrait-min) and (max-width: $viewport-tablet-portrait-max) {
+    @content;
+  }
+}
+
+//Tablets landscape only
+@mixin tablet-landscape () {
+  @media only screen and (min-width: $viewport-tablet-landscape-min) and (max-width: $viewport-tablet-landscape-max) {
+    @content;
+  }
+}
+
+// Phones and Tablets Portrait only
+@mixin phone-tablet-portrait () {
+  @media only screen and (max-width: $viewport-tablet-portrait-max) {
+    @content;
+  }
+}
+
+// Phones and all Tablets only
+@mixin phone-tablets () {
+  @media only screen and (max-width: $viewport-tablet-landscape-max) {
+    @content;
+  }
+}
+
+// Desktop only
+@mixin desktop () {
+  @media only screen and (min-width: $viewport-desktop-min) {
+    @content;
+  }
+}
+
+@mixin desktop-retina () {
+  @media only screen and (min-width: $viewport-desktop-min) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}

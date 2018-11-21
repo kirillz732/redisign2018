@@ -1,0 +1,144 @@
+$slider-arrow-color: #464547;
+$slider-trainings-arrow-color: #f5f5f5;
+$slider-steps-arrow-color: white;
+$slider-arrow-height: 28px;
+$slider-arrow-phone-height: 20px;
+$slider-arrow-width: 17px;
+$slider-steps-arrow-width: 18px;
+$slider-steps-arrow-phone-width: 12px;
+$slider-arrow-spacing: 5px;
+$slider-arrow-height-phone: 20px;
+$slider-arrow-width-phone: 12px;
+$slider-btn-phone-position: 30px;
+
+.slider-component {
+  position: relative;
+
+  // Slider Navigation
+  .slider-arrow {
+    border-top: $slider-arrow-height/2 solid #fff;
+    border-bottom: $slider-arrow-height/2 solid #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+
+    &--prev {
+      border-right: $slider-arrow-width solid $slider-arrow-color;
+      transform: translate(-($slider-arrow-spacing+$slider-arrow-width), -50%);
+      left: 0;
+
+      @include phone {
+        left: 50%;
+      }
+    }
+    &--next {
+      border-left: $slider-arrow-width solid $slider-arrow-color;
+      transform: translate($slider-arrow-spacing+$slider-arrow-width, -50%);
+      right: 0;
+
+      @include phone {
+        right: 50%;
+      }
+    }
+  }
+
+  // Slider List
+  .slider__list {
+    position: relative;
+    z-index: 3;
+  }
+
+  // Slider Item
+  .slider__item {}
+
+  // Slider customizations
+  // News List Slider
+  &--news {
+    @include phone {
+      .slider-arrow {
+        border-top-width: $slider-arrow-height-phone/2;
+        border-bottom-width: $slider-arrow-height-phone/2;
+        top: 50%;
+
+        &--prev {
+          border-right-width: $slider-arrow-width-phone;
+          transform: translate(-145px, -50%);
+        }
+        &--next {
+          border-left-width: $slider-arrow-width-phone;
+          transform: translate(145px, -50%);
+        }
+      }
+    }
+  }
+
+  &--trainings {
+    .slider-arrow {
+      border-top: $slider-arrow-height-phone/2 solid $slider-trainings-arrow-color;
+      border-bottom: $slider-arrow-height-phone/2 solid $slider-trainings-arrow-color;
+      top: 50%;
+
+      &--prev {
+        border-right: $slider-arrow-width-phone solid $slider-arrow-color;
+        transform: translate(-140px, -50%);
+      }
+      &--next {
+        border-left: $slider-arrow-width-phone solid $slider-arrow-color;
+        transform: translate(140px, -50%);
+      }
+    }
+  }
+
+  @include desktop {
+    &--join-epam {
+      display: none;
+    }
+  }
+
+  // Styles for the slider on 'About' page
+  @include phone-tablets {
+    &--join-epam {
+      margin: auto;
+
+      .slider-arrow {
+        position: absolute;
+        top: 40%;
+        z-index: 6;
+        border-top: $slider-arrow-height/2 solid transparent;
+        border-bottom: $slider-arrow-height/2 solid transparent;
+        cursor: pointer;
+        transform: none;
+
+        &--prev {
+          left: 0;
+          border-right: $slider-steps-arrow-width solid $slider-steps-arrow-color;
+        }
+        &--next {
+          right: 0;
+          border-left: $slider-steps-arrow-width solid $slider-steps-arrow-color;
+        }
+      }
+    }
+  }
+
+  @include phone {
+    &--join-epam {
+      .slider-arrow {
+        top: 70px;
+        border-top: $slider-arrow-phone-height/2 solid transparent;
+        border-bottom: $slider-arrow-phone-height/2 solid transparent;
+
+        &--prev {
+          left: $slider-btn-phone-position;
+          border-right: $slider-steps-arrow-phone-width solid $slider-steps-arrow-color;
+        }
+
+        &--next {
+          right: $slider-btn-phone-position;
+          border-left: $slider-steps-arrow-phone-width solid $slider-steps-arrow-color;
+        }
+      }
+    }
+  }
+}

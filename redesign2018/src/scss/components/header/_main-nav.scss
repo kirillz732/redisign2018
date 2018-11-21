@@ -1,0 +1,57 @@
+.main-nav {
+  margin-left: 235px;
+  margin-right: auto;
+
+  @include phone-tablets {
+    margin-left: 121px;
+  }
+
+
+  @include phone-tablet-portrait {
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+
+    @include phone-tablet-portrait {
+      display: none;
+    }
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    margin-right: 41px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 15px;
+      background-color: #fff;
+      position: absolute;
+      margin: -1px -20px 0;
+      top: 0;
+      right: 0;
+    }
+    &:last-child:after {
+      content: none;
+    }
+  }
+  &__item > a {
+    @extend %source-sans-pro-bold;
+
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__item.active > a,
+  &__item > a:hover {
+    color: #c0f7ff;
+  }
+}

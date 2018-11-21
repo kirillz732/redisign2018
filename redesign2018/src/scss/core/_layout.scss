@@ -1,0 +1,44 @@
+#root {
+  position: relative;
+  padding-top: $header-desktop-height;
+}
+
+// Main layout container
+.container {
+  padding: $container-paddings;
+  position: relative;
+  margin: 0 auto;
+
+  @include phone {
+    width: $container-phone;
+  }
+  @include tablet-portrait {
+    width: $container-tablet-portrait;
+  }
+  @include tablet-landscape {
+    width: $container-tablet-landscape;
+  }
+  @include desktop {
+    width: $container-desktop;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.row {
+  margin: 0 -15px;
+
+  @include phone {
+    margin: 0;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

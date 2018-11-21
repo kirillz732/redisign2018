@@ -1,0 +1,233 @@
+.popup-reg-form__email {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: $popup-field-pseudo-position-top;
+    content: "";
+    background: url(../images/popup/mail.svg) no-repeat;
+    background-size: contain;
+  }
+}
+.popup-reg-form-email__field {
+  height: $popup-field-height;
+  width: $popup-field-width;
+}
+.popup-reg-form__password {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: $popup-field-pseudo-position-top;
+    content: "";
+    background: url(../images/popup/padlock-unlock.svg) no-repeat;
+    background-size: contain;
+  }
+}
+.popup-reg-form-password__field {
+  height: $popup-field-height;
+  width: $popup-field-width;
+  margin-bottom: $popup-password-field-margin-bottom;
+}
+.popup-reg-form__sign-in {
+  @extend %museo-sans-900;
+
+  width: $popup-btn-width;
+  margin: $popup-btn-sign-in-bg-margin;
+  height: $popup-btn-height;
+  color: $popup-btn-text-color;
+  background-color: $popup-btn-sign-in-bg;
+  object-fit: contain;
+  border-radius: $popup-btn-border-radius;
+  font-size: $popup-btn-font-size;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #55b5c4;
+  }
+}
+.popup-reg-footer__actions {
+  display: flex;
+  justify-content: space-between;
+  a {
+    @extend %museo-sans-500;
+
+    font-size: $popup-other-actions-font-size;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $popup-footer-actions-color;
+  }
+}
+.popup-reg-footer-divider {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $popup-divider-margin;
+}
+.popup-reg-footer-divider__line {
+  display: inline-block;
+  background-color: $popup-divider-color;
+  height: 1px;
+}
+.popup-reg-footer-divider__phrase {
+  @extend %museo-sans-500;
+
+  font-size: $popup-footer-divider-phrase;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $popup-divider-color;
+  position: relative;
+  text-transform: uppercase;
+}
+.popup-reg-footer__social {
+  width: 100%;
+  display: block;
+}
+.reg-footer-social-item {
+  width: $popup-btn-width;
+  height: $popup-btn-height;
+  object-fit: contain;
+  border-radius: $popup-btn-border-radius;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+  &--facebook {
+    background-color: $popup-btn-facebook-color;
+
+    &:before {
+      width: 10px;
+      height: 18px;
+      content: "";
+      background: url(../images/socials/facebook-icon.svg) no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      background-color: $popup-btn-facebook-hover-color;
+    }
+  }
+  &--google {
+    background-color: $popup-btn-google-color;
+    &:before {
+      width: 12px;
+      height: 18px;
+      content: "";
+      background: url(../images/socials/google-icon.svg) no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      background-color: $popup-btn-google-hover-color;
+    }
+  }
+  &--epam {
+    background-color: $popup-btn-epam-color;
+    margin: $popup-btn-epam-margin;
+    .title {
+      width: 130px;
+      height: 18px;
+      font-size: $popup-btn-font-size;
+      font-weight: 900;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1px;
+      color: $popup-btn-text-color;
+      text-transform: uppercase;
+      position: relative;
+      text-align: center;
+      &::after {
+        display: inline-block;
+        content: "";
+        width: $popup-btn-epam-arrow-side;
+        height: $popup-btn-epam-arrow-side;
+        position: absolute;
+        top: $popup-btn-epam-arrow-position-top;
+        right: $popup-btn-epam-arrow-position-right;
+        border-bottom: 1px solid $popup-btn-text-color;
+        border-right: 1px solid $popup-btn-text-color;
+        transform: rotate(-45deg);
+      }
+      &::before {
+        display: inline-block;
+        content: "";
+        width: $popup-btn-epam-arrow-side;
+        height: $popup-btn-epam-arrow-side;
+        position: absolute;
+        top: $popup-btn-epam-arrow-position-top;
+        left: $popup-btn-epam-arrow-position-right;
+        border-bottom: 1px solid $popup-btn-text-color;
+        border-right: 1px solid $popup-btn-text-color;
+        transform: rotate(135deg);
+      }
+    }
+    &:hover {
+      background-color: $popup-btn-epam-hover-color;
+    }
+  }
+}
+@include not-phone {
+  .popup-reg-form-email__field {
+    margin-bottom: 10px;
+    padding: $popup-field-padding;
+  }
+
+  .popup-reg-form__email {
+    &:after {
+      right: 15px;
+      width: $popup-field-pseudo-widht;
+      height: $popup-field-pseudo-height;
+    }
+  }
+  .popup-reg-form__password {
+    &:after {
+      right: 13px;
+      width: $popup-field-pseudo-widht;
+      height: $popup-field-pseudo-height;
+    }
+  }
+  .popup-reg-form-password__field {
+    padding: $popup-field-padding;
+  }
+  .popup-reg-footer-divider__line {
+    width: 130px;
+  }
+}
+
+@include phone {
+  .popup-reg-form-email__field {
+    margin-bottom: 5px;
+    padding: $popup-mob-field-padding;
+  }
+  .popup-reg-form__email {
+    &:after {
+      right: $popup-mob-field-pseudo-position-right;
+      width: $popup-mob-field-pseudo-widht;
+      height: $popup-mob-field-pseudo-height;
+    }
+  }
+  .popup-reg-form__password {
+    &:after {
+      right: $popup-mob-field-pseudo-position-right;
+      width: $popup-mob-field-pseudo-widht;
+      height: $popup-mob-field-pseudo-height;
+    }
+  }
+  .popup-reg-form-password__field {
+    padding: $popup-mob-field-padding;
+  }
+  .popup-reg-footer-divider__line {
+    width: 120px;
+  }
+}

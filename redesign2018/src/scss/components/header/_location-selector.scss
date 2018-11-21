@@ -1,0 +1,182 @@
+.location-selector {
+  &__globe {
+    &:after {
+      content: url(../images/icons/world-icon.svg);
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  &--expanded &__panel {
+    display: block;
+  }
+  &__panel {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 68px;
+    left: 0;
+    width: calc(100% - 30px);
+    background: #fff;
+    padding: 50px 112px 70px;
+
+    @include tablets {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    @include phone-tablet-portrait {
+      padding-left: 24px;
+      padding-right: 24px;
+      position: fixed;
+      width: 100%;
+    }
+    @include phone {
+      padding: 30px 15px;
+    }
+  }
+  &__section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    @include phone {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__title {
+    @extend %museo-sans-900;
+
+    font-size: 17px;
+    color: #222;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include phone {
+      display: block;
+    }
+  }
+  &__list.languages-list {
+    margin-top: 20px;
+  }
+  &__list.social-medias-list {
+    margin-top: 13px;
+
+    @include phone {
+      margin-top: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 1 0 33.33%;
+    width: 33.33%;
+    padding: 0 15px;
+    border-left: 1px solid #ccc;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include phone {
+      padding: 15px 0;
+      border: none;
+      flex-basis: 100%;
+      width: 100%;
+      height: auto;
+    }
+
+    &:first-child {
+      padding-left: 0;
+      border: none;
+    }
+
+    .social-medias-list & {
+      height: 100px;
+      align-items: flex-start;
+      padding-top: 20px;
+
+      @include tablets {
+        padding-top: 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @include phone {
+        height: auto;
+        padding: 28px 0 30px;
+        align-items: center;
+        border-top: 1px solid #ccc;
+
+        &:first-child {
+          border: 0;
+        }
+      }
+    }
+
+    a {
+      @extend %source-sans-pro-bold;
+
+      color: #000;
+      font-size: 17px;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #008ace;
+    }
+    .item-title {
+      font-size: 17px;
+
+      @include tablets {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    .social-list {
+    }
+    .social-item {
+      background: $btn-blue-bgr-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      margin-left: 5px;
+      border-radius: 50%;
+      text-decoration: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &--facebook {
+        &:before {
+          width: 8px;
+          height: 15px;
+        }
+      }
+      &--twitter {
+        &:before {
+          width: 14px;
+          height: 13px;
+        }
+      }
+      &--linkedin {
+        &:before {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

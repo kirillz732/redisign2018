@@ -1,0 +1,11 @@
+.talk-to-us {
+  text-align: center;
+
+  @include not-phone {
+    display: none;
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
+}

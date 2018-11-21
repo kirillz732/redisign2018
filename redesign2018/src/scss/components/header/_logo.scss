@@ -1,0 +1,33 @@
+.logo-container {
+  display: flex;
+
+  .logo {
+    &:first-child {
+      margin-right: 25px;
+
+      @include phone-tablet-portrait {
+        margin-right: 15px;
+      }
+    }
+    &--epam > a {
+      display: block;
+      background: url(../images/epam-logo-white.png) no-repeat;
+      background-size: contain;
+      height: 31px;
+      width: 86px;
+    }
+    &--training-center > a {
+      display: block;
+      background: url(../images/training-center-logo-desktop.png) no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 92px;
+
+      @include phone {
+        background-image: url(../images/training-center-logo-mobile.png);
+        height: 36px;
+        width: 32px;
+      }
+    }
+  }
+}

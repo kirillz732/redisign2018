@@ -1,0 +1,557 @@
+.map-section {
+  font-size: $map-section-tablet-font;
+
+  &.section-ui {
+    padding-top: 20px;
+  }
+}
+
+.countries-list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #818181;
+  cursor: pointer;
+
+  //temp font decision
+  @extend %museo-sans-500;
+
+  font-weight: 900;
+
+  &__item {
+    display: block;
+    width: $country-item-width;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: $map-bgr-color;
+    border-right: $country-border-size solid white;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover,
+    &--active {
+      color: $map-active-color;
+      background-color: $btn-blue-bgr-color;
+    }
+  }
+}
+
+.map-container {
+  position: relative;
+
+  &--img {
+    height: $map-img-height;
+    background: {
+      image: url('../images/map.jpg');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    };
+  }
+}
+
+.cities-container {
+  position: absolute;
+  width: $country-item-width - $country-border-size;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: $cities-font-color;
+  background-color: white;
+  border: $country-border-size solid $map-bgr-color;
+  overflow-y: scroll;
+
+  &--scroll {
+    &::-webkit-scrollbar {
+      width: 20px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 18px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 17px;
+      box-shadow: 0 2px 2px 0 rgba(127, 127, 127, 0.5);
+      background-color: #fefefe;
+    }
+  }
+}
+
+.city-item {
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  &__city-container {
+    padding: 12px $cities-padding;
+
+    &:hover {
+      color: #000;
+
+      .city-item__city-btn--hover {
+        border: {
+          top: 8px solid #000;
+          left: 8px solid transparent;
+          right: 8px solid transparent;
+          bottom: transparent;
+        }
+      }
+    }
+  }
+
+  &__city-title {
+    //temp font decision
+    @extend %museo-sans-500;
+
+    font-weight: 900;
+  }
+
+  &__city-link {
+    display: none;
+  }
+
+  &__city-btn {
+    position: absolute;
+    top: 35%;
+    right: $cities-padding;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: {
+      radius: 0;
+      top: 8px solid $cities-font-color;
+      left: 8px solid transparent;
+      right: 8px solid transparent;
+      bottom: transparent;
+    }
+  }
+
+  &__streets {
+    display: none;
+  }
+
+  &--active {
+    .city-item {
+      &__city-container {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: $cities-padding;
+          width: 70%;
+          height: 1px;
+          background-color: #ccc;
+        }
+      }
+
+      &__city-title {
+        color: #000;
+      }
+
+      &__city-link {
+        @extend %source-sans-pro-semibold;
+
+        display: block;
+        padding: 15px 0 20px;
+        font-size: 14px;
+        text-decoration: underline;
+
+        &:hover {
+          color: $links-color-active;
+        }
+      }
+
+      &__city-btn {
+        border: {
+          bottom: 8px solid #000;
+          left: 8px solid transparent;
+          right: 8px solid transparent;
+          top: transparent;
+        }
+
+        &--close {
+          border: {
+            bottom: 8px solid #464547;
+            left: 8px solid transparent;
+            right: 8px solid transparent;
+            top: transparent;
+          }
+        }
+      }
+
+      &__streets {
+        display: block;
+      }
+
+      &__street-item {
+        display: block;
+        line-height: 1.22;
+        cursor: pointer;
+        padding: 8px $cities-padding 8px;
+
+        &:first-child {
+          padding: 29px $cities-padding 8px;
+        }
+
+        &:last-child {
+          margin-bottom: 28px;
+        }
+
+        &:hover {
+          color: #000;
+          background-color: #d5eff3;
+        }
+
+        &--active {
+          color: #000;
+          background-color: #d5eff3;
+        }
+      }
+    }
+  }
+
+  &:first-child {
+    .city-item__city-container {
+      padding: 30px $cities-padding 0;
+    }
+  }
+
+  &:last-child {
+    .city-item__city-container {
+      padding: 12px $cities-padding 30px;
+    }
+
+    .city-item__city-btn {
+      top: 30%;
+    }
+  }
+}
+
+@include desktop {
+  .mobile-only {
+    display: none;
+  }
+
+  .map-section {
+    font-size: $map-section-font;
+
+    &.section-ui {
+      padding-top: 50px;
+    }
+  }
+}
+
+@include tablets {
+  .mobile-only {
+    display: none;
+  }
+
+  .map-component {
+    .countries-list {
+      &__item {
+        font-size: $map-streets-tablet-font;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
+
+  .city-item {
+    &__city-container {
+      padding: 8px $cities-tablet-padding-left;
+    }
+
+    &:first-child {
+      .city-item__city-container {
+        padding: 30px $cities-tablet-padding-left 0;
+      }
+    }
+
+    &:last-child {
+      .city-item__city-container {
+        padding: 12px $cities-tablet-padding-left 30px;
+      }
+    }
+
+    &--active {
+      .city-item {
+        &__city-container {
+          &::after {
+            left: $cities-tablet-padding-left;
+          }
+        }
+
+        &__street-item {
+          padding: 5px $cities-tablet-padding-left 8px;
+
+          &:first-child {
+            padding: 25px $cities-tablet-padding-left 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet-landscape {
+  .map-container {
+    &--img {
+      height: $map-img-tablet-height;
+    }
+
+    .cities-container {
+      width: $country-item-tablet-width - $country-border-size;
+    }
+  }
+
+  .map-component {
+    .countries-list {
+      &__item {
+        width: $country-item-tablet-width;
+      }
+    }
+  }
+}
+
+@include tablet-portrait {
+  .map-container {
+    &--img {
+      height: $map-img-tablet-portrait-height;
+    }
+
+    .cities-container {
+      width: $country-first-item-tablet-portrait - $country-border-size;
+
+      &--scroll {
+        &::-webkit-scrollbar {
+          width: 15px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 13px;
+        }
+      }
+    }
+  }
+
+  .map-component {
+    .countries-list {
+      &__item {
+        width: $country-item-tablet-portrait-width;
+
+        &:first-child {
+          width: $country-first-item-tablet-portrait;
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  .mobile-only {
+    display: block;
+  }
+
+  .map-section {
+    .section-ui {
+      &__title {
+        margin-bottom: 64px;
+      }
+    }
+  }
+
+  .countries-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__item {
+      margin-bottom: 5px;
+      padding: 12px;
+      letter-spacing: 2px;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .map-container {
+    &--img {
+      height: auto;
+      background: none;
+    }
+  }
+
+  .cities-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    overflow-y: visible;
+    border: none;
+
+    &__country-title {
+      padding: 30px 0 50px;
+      //TEMP
+      @include museo-sans-500;
+
+      font-size: 29px;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 3.6px;
+      color: #000;
+    }
+  }
+
+  .cities-list {
+    font-size: 19px;
+    color: #000;
+  }
+
+  .city-item {
+    @include source-sans-pro-bold;
+
+    &__city-container {
+      padding: 8px 15px;
+
+      &:hover {
+        .city-item__city-btn--hover {
+          border: {
+            top: 8px solid $cities-phone-arrows-color-hover;
+            left: 7px solid transparent;
+            right: 7px solid transparent;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      .city-item__city-container {
+        padding: 8px 15px 30px;
+      }
+    }
+
+    &__city-title {
+      @include source-sans-pro-black;
+
+      font-size: 22px;
+      letter-spacing: 1px;
+      line-height: normal;
+      text-transform: uppercase;
+      color: $yellow-green;
+
+      &:hover {
+        color: $btn-green-bgr-hover;
+      }
+    }
+
+    &__city-btn {
+      border: {
+        top: 8px solid $cities-phone-arrows-color;
+        left: $cities-phone-arrows-size solid transparent;
+        right: $cities-phone-arrows-size solid transparent;
+      }
+    }
+
+    &__street-phone {
+      color: $light-blue;
+    }
+
+    &__map-link {
+      position: relative;
+      display: block;
+      width: $mobile-map-link-width;
+      padding-top: 10px;
+      text-transform: uppercase;
+      word-wrap: break-word;
+      color: #000;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: $mobile-map-link-arrow-right;
+        width: $mobile-map-link-arrow-width;
+        height: $mobile-map-link-arrow-width;
+        border: {
+          top: 1px solid #000;
+          right: 1px solid #000;
+        };
+
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        right: $mobile-map-link-arrow-right + 8%;
+      }
+    }
+
+    &--active {
+      .city-item {
+        &__city-container {
+          padding: 30px $cities-phone-padding 0;
+
+          &::after {
+            content: none;
+          }
+
+          &:hover {
+            .city-item__city-btn--close {
+              border: {
+                bottom: 8px solid $cities-phone-arrows-color-hover;
+                left: $cities-phone-arrows-size solid transparent;
+                right: $cities-phone-arrows-size solid transparent;
+                top: transparent;
+              }
+            }
+          }
+        }
+
+        &__city-title {
+          color: $yellow-green;
+        }
+
+        &__street-item {
+          line-height: 26px;
+          padding: 0 $cities-phone-padding 20px;
+
+          &:first-child {
+            padding: 0 $cities-phone-padding 25px;
+          }
+        }
+
+        &__city-link {
+          font-size: 16px;
+          padding: 5px 0 15px;
+        }
+
+        &__city-btn {
+          top: 12%;
+          right: $cities-phone-padding;
+
+          &--close {
+            border: {
+              bottom: 8px solid $cities-phone-arrows-color-hover;
+              left: $cities-phone-arrows-size solid transparent;
+              right: $cities-phone-arrows-size solid transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      .city-item__city-container {
+        padding: 0 15px;
+      }
+    }
+  }
+}

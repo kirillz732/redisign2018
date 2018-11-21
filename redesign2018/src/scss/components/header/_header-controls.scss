@@ -1,0 +1,38 @@
+.header-controls {
+  display: flex;
+
+  .header-control {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .header-auth {
+    @include phone-tablet-portrait {
+      display: none;
+    }
+
+    &__signin {
+      @extend %source-sans-pro-semibold;
+
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    &__signin-icon {
+      display: flex;
+      margin-right: 10px;
+
+      &:after {
+        content: url(../images/icons/login-icon.svg);
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.history-section {
+  &.section-ui {
+    padding-top: $history-section-top-padding;
+    padding-bottom: $history-section-bottom-padding;
+  }
+
+  &__title {
+    margin-bottom: $history-title-margin;
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &::before {
+      content: '';
+      width: $timeline-width;
+      height: $timeline-height;
+      background-color: $timeline-bgr;
+    }
+  }
+
+  &__period {
+    position: relative;
+    flex: 0 0 $history-period-width;
+    width: $history-period-width;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -($timeline-point-size/2 + $timeline-height/2);
+      left: $history-period-width/2 - $timeline-point-size/2;
+      width: $timeline-point-size;
+      height: $timeline-point-size;
+      border-radius: $circle-bgr-radius;
+      background-color: $timeline-bgr;
+    }
+  }
+
+  &__year {
+    @extend %museo-slab-500;
+    
+    padding: $history-year-padding;
+    font-style: $timeline-year-size;
+  }
+
+  &__description {
+    line-height: 1.38;
+  }
+}
+
+@include phone-tablets {
+  .history-section {
+    &.section-ui {
+      padding-top: 70px;
+      padding-bottom: 0;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__year {
+      padding: 0 0 10px;
+      font-size: 43px;
+
+      &--light-blue {
+        color: $light-blue;
+      }
+
+      &--green {
+        color: $yellow-green;
+      }
+
+      &--red {
+        color: $salmon-red;
+      }
+
+      &--dark-blue {
+        color: $dark-blue;
+      }
+    }
+
+    &__period {
+      font-size: 17px;
+      margin-bottom: 50px;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__description {
+      line-height: 1.35;
+    }
+  }
+}
+
+@include tablet-landscape {
+  .history-section {
+    &__period {
+      flex: 0 0 $history-period-width-tablet;
+      width: $history-period-width-tablet;
+      padding: 0 22px;
+    }
+  }
+}
+
+@include tablet-portrait {
+  .history-section {
+    &__period {
+      flex: 0 0 $history-period-width-tablet-portrait;
+      width: $history-period-width-tablet-portrait;
+      padding: 0 32px;
+    }
+  }
+}
+
+@include phone {
+  .history-section {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__period {
+      width: 85%;
+      margin-bottom: 30px;
+      padding: 0;
+      flex: 0 0 $history-period-width-phone;
+    }
+
+    &__description {
+      line-height: 1.35;
+    }
+  }
+}

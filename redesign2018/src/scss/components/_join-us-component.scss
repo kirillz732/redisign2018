@@ -1,0 +1,650 @@
+// Common styles for steps
+.steps-list {
+  display: flex;
+  justify-content: center;
+  color: $slider-text-color;
+
+  &__container {
+    display: flex;
+
+    // Styles for customized border (for training tab)
+    &--border {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -25px;
+        left: -200px;
+        width: 970px;
+        height: 330px;
+        background: {
+          image: url('../images/step-training-border.svg');
+          repeat: no-repeat;
+          position: center;
+          size: 970px 330px;
+        };
+      }
+    }
+  }
+
+  &__description {
+    margin: 100px 0 95px;
+    text-align: center;
+    line-height: 1.33;
+
+    @extend %museo-slab-500;
+
+    font-size: $step-list-description;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+
+    //temp font
+    @extend %museo-sans-500;
+    //temp font-weight
+    font-weight: 900;
+  }
+
+  &__item-description {
+    //temp decision
+    @extend %source-sans-pro-regular;
+
+    font-size: $step-description-font;
+    line-height: 1.2;
+  }
+
+  &__svg-container {
+    display: flex;
+    width: $step-svg-container-size;
+    height: $step-svg-container-size;
+    border-radius: $circle-bgr-radius;
+    box-shadow: -5px 5px 10px 0 rgba(51, 51, 51, 0.2);
+    background: {
+      color: $step-img-bgr-color;
+    }
+
+    // Styles for the steps which are connected with lines
+    &--line {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 90px;
+        height: 4px;
+        background-color: $step-lines-color;
+      }
+    }
+
+    // Styles for the steps which have box-shadow
+    &--shadow,
+    &--shadow > div {
+      box-shadow: 0 0 10px 2px rgba(197, 197, 197, 0.5);
+    }
+
+    // Styles for the steps which have arrow-imgs
+    &--arrows {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: $step-arrows-width;
+        height: $step-arrows-height;
+        background: {
+          image: url("../images/arrows.svg");
+          position: center;
+          size: $step-arrows-width $step-arrows-height;
+        };
+      }
+    }
+  }
+
+  &__svg-image {
+    width: $step-img-bgr-size;
+    height: $step-img-bgr-size;
+    margin: auto;
+    border-radius: $circle-bgr-radius;
+    box-shadow: 0 0 10px 2px rgba(214, 214, 214, 0.5);
+    background: {
+      position: center;
+      repeat: no-repeat;
+      color: $step-img-bgr-color;
+      size: 48px 48px;
+    }
+  }
+
+  // Styles for steps bgr
+  &--student {
+    .steps-list__svg-image {
+      &--register {
+        background: {
+          image: url("../images/step-monitor.svg");
+        };
+      }
+
+      &--sphere {
+        background: {
+          image: url("../images/step-mouse.svg");
+        };
+      }
+
+      &--form {
+        background: {
+          image: url("../images/step-form.svg");
+        };
+      }
+
+      &--registration {
+        background: {
+          image: url("../images/step-check.svg");
+        };
+      }
+
+      &--call {
+        background: {
+          image: url("../images/step-smartphone.svg");
+        };
+      }
+
+      &--interview {
+        background: {
+          image: url("../images/step-desk.svg");
+        };
+      }
+
+      &--instruction {
+        background: {
+          image: url("../images/step-arrows.svg");
+        };
+      }
+    }
+  }
+
+  &--interview {
+    .steps-list {
+      &__container {
+        z-index: 6;
+      }
+
+      &__svg-image {
+        &--application {
+          background: {
+            image: url("../images/step-application.svg");
+          };
+        }
+
+        &--phone-interview {
+          background: {
+            image: url("../images/step-phone-interview.svg");
+          };
+        }
+
+        &--recruiter {
+          background: {
+            image: url("../images/step-recruiter.svg");
+          };
+        }
+
+        &--technical-interview {
+          background: {
+            image: url("../images/step-technical-interview.svg");
+          };
+        }
+      }
+
+      &__item-description {
+        width: 160px;
+      }
+    }
+  }
+
+  &--training {
+    .steps-list__svg-image {
+      &--training-img {
+        background: {
+          image: url("../images/step-training.svg");
+        };
+      }
+
+      &--laboratory {
+        background: {
+          image: url("../images/step-laboratory.svg");
+        };
+      }
+
+      &--hire-img {
+        background: {
+          image: url("../images/step-hired.svg");
+        };
+      }
+    }
+  }
+
+  &--work {
+    .steps-list__svg-image {
+      &--collaboration {
+        background: {
+          image: url("../images/step-collaboration.svg");
+        };
+      }
+
+      &--relocation {
+        background: {
+          image: url("../images/step-relocation.svg");
+        };
+      }
+
+      &--handshake {
+        background: {
+          image: url("../images/step-handshake.svg");
+        };
+      }
+
+      &--dress-code {
+        background: {
+          image: url("../images/step-dresscode.svg");
+        };
+      }
+
+      &--clock-img {
+        background: {
+          image: url("../images/step-clock.svg");
+        };
+      }
+
+      &--career-ladder {
+        background: {
+          image: url("../images/step-career.svg");
+        };
+      }
+    }
+  }
+}
+
+// Styles for tabs in tab-content
+.join-epam {
+  &.section-ui {
+    padding: 50px 0;
+  }
+
+  &__item {
+    display: flex;
+    min-height: $tab-content-size;
+    margin-top: $tab-item-margin;
+
+    &--student {
+      background: $tab-bgr-student;
+    }
+
+    &--training {
+      background: $tab-bgr-training;
+    }
+
+    &--work {
+      background: $tab-bgr-work;
+    }
+
+    &--interview {
+      position: relative;
+      background: $tab-bgr-interview;
+
+      // Styles for the line which goes through the bgr
+      &::after {
+        content: '';
+        position: absolute;
+        top: 53%;
+        width: 100%;
+        height: 6px;
+        background-color: $step-lines-color;
+      }
+    }
+
+    &--student,
+    &--work {
+      align-items: center;
+    }
+  }
+
+  &__student-step,
+  &__work-step {
+    .steps-list__svg-container {
+      margin: $step-circle-margin 0;
+    }
+  }
+
+  &__student-steps {
+    min-height: 550px;
+  }
+
+  &__student-step {
+    &:last-child .steps-list__svg-container--line {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:nth-child(odd) {
+      .steps-list__svg-container--line {
+        &::after {
+          bottom: 25px;
+          right: -50px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .steps-list__svg-container--line {
+        &::after {
+          top: -7px;
+          right: -35px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__training-steps {
+    padding-top: $step-item-training-padding;
+  }
+
+  &__work-steps {
+    height: 385px;
+  }
+
+  &__work-step {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(odd) {
+      .steps-list__description {
+        width: 155px;
+      }
+
+      .steps-list__svg-container--arrows::after {
+        bottom: -65px;
+        left: $step-svg-container-size/2 - $step-arrows-width/2;
+      }
+    }
+
+    &:nth-child(even) {
+      .steps-list__item-description {
+        width: 170px;
+      }
+
+      .steps-list__svg-container--arrows::after {
+        top: -($step-circle-margin + $step-description-margin)/2 - $step-arrows-width/2;
+        left: $step-svg-container-size/2 - $step-arrows-width/2;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__student-steps,
+  &__work-steps {
+    section:nth-child(odd) {
+      align-self: flex-start;
+
+      .steps-list__item-description {
+        overflow: hidden;
+      }
+    }
+
+    section:nth-child(even) {
+      align-self: flex-end;
+
+      .steps-list__item-description {
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__interview-steps,
+  &__training-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__interview-step,
+  &__training-step {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .steps-list__svg-container {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include desktop {
+  .join-epam {
+    &__student-step {
+      &:nth-child(odd) {
+        .steps-list__item-description {
+          height: $steps-descr-height-odd;
+        }
+      }
+
+      &:nth-child(even) {
+        .steps-list__item-description {
+          height: $steps-descr-height-even;
+        }
+      }
+    }
+
+    &__work-step {
+      .steps-list__item-title {
+        margin-top: $steps-title-margin;
+      }
+
+      &:nth-child(odd) {
+        .steps-list__item-description {
+          height: $steps-descr-height-odd-work;
+        }
+      }
+
+      &:nth-child(even) {
+        .steps-list__item-description {
+          height: $steps-descr-height-even;
+          margin-bottom: $step-description-margin;
+        }
+      }
+    }
+  }
+}
+
+@include phone-tablets {
+  .slider-component {
+    &--join-epam {
+      .slider__list {
+        align-items: center;
+      }
+
+      .slider__item {
+        margin: 0;
+      }
+    }
+  }
+
+  .steps-list {
+    &__item-title {
+      margin: 0 0 5px;
+      font-size: 20px;
+    }
+
+    &__item-description {
+      margin: 0;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 1.43;
+    }
+
+    &__svg-container {
+      width: $step-svg-container-tablet-size;
+      height: $step-svg-container-tablet-size;
+      margin: 20px 0;
+    }
+
+    &__svg-image {
+      width: $step-img-bgr-tablet-size;
+      height: $step-img-bgr-tablet-size;
+    }
+
+    &--student,
+    &--work {
+      .steps-list__item-description {
+        height: $steps-descr-height;
+      }
+    }
+
+    &--interview,
+    &--training {
+      .slider-component {
+        display: flex;
+
+        .steps-list {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  .join-epam__item {
+    min-height: $tab-content-tablet-size;
+
+    &--training {
+      background-size: 80%;
+    }
+
+    &--interview {
+      &::after {
+        display: none;
+      }
+    }
+
+    &--student,
+    &--work {
+      .slider-component {
+        &--join-epam {
+          .slider__item {
+            align-self: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet-landscape {
+  .slider-component {
+    &--join-epam {
+      .slider__item {
+        //TEMP
+        &:nth-child(n+5) {
+          display: none;
+        }
+
+        margin: 0;
+        padding: 15px;
+        flex: 0 0 $tablet-slider-item-width;
+        width: $tablet-slider-item-width;
+      }
+    }
+  }
+}
+
+@include tablet-portrait {
+  .slider-component {
+    &--join-epam {
+      .slider__item {
+        //TEMP
+        &:nth-child(n+4) {
+          display: none;
+        }
+
+        padding: 10px;
+        flex: 0 0 $tablet-portrait-slider-item-width;
+        width: $tablet-portrait-slider-item-width;
+      }
+    }
+  }
+}
+
+@include phone {
+  .join-epam__item {
+    min-height: $tab-content-phone-size;
+
+    &--student {
+      background: $phone-tab-bgr-student;
+    }
+
+    &--training {
+      background: $phone-tab-bgr-training;
+    }
+
+    &--interview {
+      background: $phone-tab-bgr-interview;
+    }
+
+    &--work {
+      background-size: 115px;
+    }
+  }
+
+  .slider-component {
+    &--join-epam {
+      .slider__item {
+        //TEMP
+        &:nth-child(n+2) {
+          display: none;
+        }
+
+        padding: 0 5px;
+        flex: 0 0 $phone-slider-item-width;
+        width: $phone-slider-item-width;
+      }
+    }
+  }
+
+  .steps-list {
+    &__item-description {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    &--student,
+    &--work {
+      .steps-list__item-description {
+        height: auto;
+      }
+    }
+
+    &--interview {
+      .steps-list__item-description {
+        width: $phone-slider-item-width;
+      }
+    }
+
+    &__svg-image {
+      background-size: 44px 44px;
+    }
+  }
+}

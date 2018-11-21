@@ -1,0 +1,31 @@
+.breadcrumb-section {
+  .breadcrumb {
+    padding: $breadcrumb-padding;
+    .breadcrumb__list {
+      .breadcrumb__item {
+        display: inline-block;
+        position: relative;
+        margin: $breadcrumb-item-margin;
+        &:after {
+          position: absolute;
+          top: $breadcrumb-item-pseudo-top;
+          right: $breadcrumb-item-pseudo-right;
+          display: block;
+          content: $breadcrumb-item-pseudo-content;
+          width: $breadcrumb-item-pseudo-width;
+          height: $breadcrumb-item-pseudo-height;
+        }
+        &:last-child:after {
+          content: none;
+        }
+        a {
+          color: $breadcrumb-links-color;
+          font-size: $breadcrumb-links-font-size;
+        }
+      }
+    }
+  }
+  @include phone-tablets {
+    display: none;
+  }
+}

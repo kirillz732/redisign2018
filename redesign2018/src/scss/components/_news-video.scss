@@ -1,0 +1,46 @@
+.news-video{
+  display: flex;
+  background: #d8d8d8;
+
+  
+
+  &--vk{
+    width: 17px;
+    height: 17px;
+  }
+
+  &--linkedin{
+    width: 17px;
+    height: 17px;
+  }
+
+  &--facebook{
+    width: 10px;
+    height: 17px;
+  }
+
+  &--twitter{
+    width: 17px;
+    height: 15px;
+  }
+
+  &__content{
+    margin-left: auto;
+  }
+  &__heading {
+    @extend %museo-slab-500;
+    margin-top: 70px;
+    width: 241px;
+    height: 31px;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #76cdd7;
+  }
+
+
+}

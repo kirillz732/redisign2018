@@ -1,0 +1,23 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["function", "if", "else", "each", "include", "mixin", "extend", "content"]
+    }],
+    "block-no-empty": null,
+    "no-empty-source": null,
+    "max-empty-lines": null,
+    "no-eol-whitespace": null,
+    "selector-pseudo-element-colon-notation": null,
+    "comment-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "selector-list-comma-newline-after": null,
+    "no-missing-end-of-source-newline": null,
+    "at-rule-empty-line-before": null,
+    "color-hex-length": null,
+    "no-descending-specificity": null
+  },
+  "ignoreFiles": [
+    "./src/scss/core/_reset.scss"
+  ]
+}

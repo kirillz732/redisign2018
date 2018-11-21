@@ -1,0 +1,138 @@
+$hero-banner-height-desktop: 600px;
+$hero-banner-height-tablet-landscape: 500px;
+$hero-banner-height-tablet-portrait: 400px;
+$hero-banner-bg-gradient: linear-gradient(rgba(0, 78, 90, 0.35), rgba(0, 78, 90, 0.35));
+$hero-banner-heading-size: 54px;
+$hero-banner-heading-size-tablet: 41px;
+$hero-banner-heading-size-phone: 34px;
+$hero-banner-text-color: #ffffff;
+$hero-banner-text-size-tablet: 19px;
+$hero-banner-text-size-phone: 19px;
+
+.hero-banner {
+  background: $hero-banner-bg-gradient center no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: $hero-banner-height-desktop;
+
+  @include phone-tablets {
+    height: $hero-banner-height-tablet-landscape;
+  }
+
+  @include phone-tablet-portrait {
+    height: $hero-banner-height-tablet-portrait;
+  }
+
+  &__content {
+    color: $hero-banner-text-color;
+    text-align: center;
+  }
+  &__heading {
+    @extend %museo-slab-500;
+
+    font-size: $hero-banner-heading-size;
+    line-height: 1.11em;
+  }
+
+  &__text {
+    @extend %source-sans-pro-regular;
+
+    width: $banner-text-width;
+    font-size: $banner-text-font-size;
+    line-height: 1.44;
+    padding: $banner-text-padding;
+  }
+
+  // Hero Banner's background for the different pages
+  &--home {
+    background: #263852; // Designer should fix png pattern to transparent "images/pattern-banner-mob.png"
+
+    @include not-phone {
+      background: $hero-banner-bg-gradient, url(../images/startbanner-desktop@2x.jpg) center top no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--about {
+    background: $hero-banner-bgr-about;
+    background-size: cover;
+  }
+
+  &--faq {
+    background: #fff; // Designer should fix png pattern to transparent "images/pattern-banner-mob.png"
+
+    @include not-phone {
+      background: $hero-banner-bg-gradient, url(../images/faq-banner@3x.jpg) center top no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--news-video {
+    background: #ffffff;
+    color: #000000;
+    height: 236px;
+    margin-top: 70px;
+
+    .hero-banner__heading {
+      font-size: 54px;
+      font-weight: 300;
+      line-height: 1.22;
+      height: 132px;
+      color: #000000;
+    }
+
+    .hero-banner__content:after {
+      display: inline-block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #000;
+      margin-top: 100px;
+    }
+  }
+}
+
+@include tablets {
+  .hero-banner {
+    &__heading {
+      font-size: $hero-banner-heading-size-tablet;
+    }
+
+    &__text {
+      width: $banner-text-width-tablet;
+      font-size: $hero-banner-text-size-tablet;
+      line-height: 1.26;
+    }
+  }
+}
+
+@include phone {
+  .hero-banner {
+
+    &__heading {
+      font-size: $hero-banner-heading-size-phone;
+      color: #000;
+    }
+
+    &__text {
+      width: auto;
+      text-align: center;
+      font-size: $hero-banner-text-size-phone;
+      line-height: 1.58;
+      color: #000;
+    }
+
+    &--about {
+      background: none;
+    }
+    &--faq {
+      height: 190px;
+    }
+  }
+  &--news {
+    background: #ffffff;
+    color: #000000;
+  }
+}

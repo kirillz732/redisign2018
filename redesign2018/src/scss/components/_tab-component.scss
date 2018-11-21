@@ -1,0 +1,94 @@
+.tab-component {
+
+  .tab-nav {
+    display: flex;
+
+    &__list {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__item {
+      display: flex;
+      position: relative;
+      margin-right: 62px;
+
+      @include phone-tablets {
+        margin-right: 30px;
+        margin-bottom: 13px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: #000;
+        position: absolute;
+        margin: -1px -31px 0;
+        top: 0;
+        right: 0;
+
+        // Vertical separators on mobile devices can be implemented with help of JS.
+        // See an example in mobile view of epam.com (links in footer take item--piped class depending on linebreaks)
+        @include phone-tablets {
+          margin: -1px -15px 0;
+        }
+      }
+      &:last-child:after {
+        content: none;
+      }
+
+      &.active {}
+
+      > span {
+        @extend %source-sans-pro-black;
+
+        color: #000;
+        cursor: pointer;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      &.active > span,
+      > span:hover {
+        color: $links-color;
+      }
+
+      //colors for tabs in slider
+      //on 'About' page
+      &--interview-active {
+        color: $yellow-green;
+      }
+
+      &--training-active {
+        color: $dark-blue;
+      }
+
+      &--work-active {
+        color: $salmon-red;
+      }
+    }
+  }
+
+  .tab-content {
+    &__list {}
+    &__item {}
+
+    .desktop-only {
+      display: none;
+    }
+
+    @include desktop {
+      .desktop-only {
+        display: block;
+      }
+    }
+  }
+}

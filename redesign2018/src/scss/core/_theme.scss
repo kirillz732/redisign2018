@@ -1,0 +1,152 @@
+// Components
+@import "../components/a11y";
+@import "../components/tab-component";
+@import "../components/slider-component";
+@import "../components/ask-question";
+@import "../components/social-icons";
+
+// Elements & Sections
+@import "../components/header";
+@import "../components/hero-banner";
+@import "../components/training-list";
+@import "../components/news-list";
+@import "../components/talk-to-us";
+@import "../components/footer";
+@import "../components/history-section";
+@import "../components/join-us-component";
+@import "../components/map-component";
+@import "../components/horizon-line";
+@import "../components/news-video";
+
+@import "../components/accordion";
+@import "../components/popup";
+@import "../components/popup-registration";
+@import "../components/breadcrumb";
+
+
+
+// Sections & blocks
+.section-ui {
+  padding-top: 100px;
+  padding-bottom: 95px;
+  position: relative;
+
+  @include phone-tablets {
+    padding-top: 70px;
+    padding-bottom: 73px;
+  }
+
+  &__title {
+    @extend %museo-sans-900;
+
+    color: #000;
+    font-size: 32px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @include phone {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__text {
+    @extend %museo-slab-500;
+
+    font-size: 17px;
+  }
+
+  // Block/Section with gray background
+  &--bg-gray {
+    background: #f5f5f5;
+  }
+}
+
+// Buttons
+.btn {
+  @extend %museo-sans-900;
+
+  display: inline-block;
+  border: none;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: $btn-font-color;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 40px;
+  min-width: 210px;
+  padding: 0 30px;
+
+  &:hover,
+  &:focus {
+    color: $btn-font-color;
+    text-decoration: none;
+  }
+
+  &--blue {
+    background-color: $btn-blue-bgr-color;
+  }
+  &--blue:hover {
+    background-color: $btn-blue-bgr-hover;
+  }
+  &--green {
+    background-color: $btn-green-bgr-color;
+  }
+  &--green:hover {
+    background-color: $btn-green-bgr-hover;
+  }
+}
+
+.hidden-xs {
+  @include phone {
+    display: none;
+  }
+}
+.hidden-sm {
+  @include tablet-portrait {
+    display: none;
+  }
+}
+.hidden-md {
+  @include tablet-landscape {
+    display: none;
+  }
+}
+.hidden-lg {
+  @include desktop {
+    display: none;
+  }
+}
+.hidden {
+  display: none !important;
+}
+
+@include tablets {
+  .section-ui {
+    &__title {
+      margin-bottom: $history-tablet-title-margin;
+    }
+  }
+}
+
+@include tablet-portrait {
+  .section-ui {
+    &__title {
+      font-size: $section-title-font-size;
+    }
+  }
+}
+
+@include phone {
+  .section-ui {
+    &__title {
+      font-size: $section-title-font-size;
+      margin-bottom: $history-phone-title-margin;
+    }
+  }
+}

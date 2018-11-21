@@ -1,0 +1,78 @@
+.mobile-nav {
+  display: none;
+
+  @include phone-tablet-portrait {
+    display: block;
+  }
+  &__opener {
+    @extend %museo-sans-900;
+
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-left: 10px;
+    height: 35px;
+    border: solid 1px #ffffff;
+    border-radius: 0;
+
+    &:hover {
+      background: none;
+    }
+  }
+  &__cross {
+    display: inline-block;
+    transform: rotate(45deg);
+
+    &:before {
+      content: url(../images/icons/cross-icon.svg);
+    }
+  }
+  &--expanded &__cross {
+    transform: none;
+  }
+  &__dropdown {
+    // When the mobile navigation is opened, html element has to have overflow-y: hidden property.
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 68px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+    height: calc(100% - 68px);
+    background: #fff;
+    transition: 0.4s ease-in-out;
+    transition-property: top;
+  }
+  &--expanded &__dropdown {
+    display: flex;
+  }
+  &__list {
+    padding: 30px 15px 0;
+    margin-bottom: 64px;
+    overflow-y: auto;
+  }
+  &__item {
+    padding: 24px 0 22px;
+    border-bottom: 1px solid #d8d8d8;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    user-select: none;
+
+    &:last-child {
+      border: 0;
+    }
+
+    a {
+      @extend %source-sans-pro-black;
+
+      color: #000;
+      font-size: 17px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+  }
+}

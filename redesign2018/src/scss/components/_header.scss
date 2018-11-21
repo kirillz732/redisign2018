@@ -1,0 +1,22 @@
+#header {
+  background: $header-bg;
+  height: $header-desktop-height;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+
+  > .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+@import "header/logo";
+@import "header/main-nav";
+@import "header/mobile-nav";
+@import "header/header-controls";
+@import "header/location-selector";

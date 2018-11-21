@@ -1,0 +1,42 @@
+{
+  "name": "redesign2018",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode development",
+    "stylelint": "stylelint src/scss/**/**/*.scss || true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "ignore-assets-webpack-plugin": "^2.0.1",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-fix-style-only-entries": "0.0.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "postcss-loader": "^3.0.0",
+    "sass-autoprefixer": "^1.0.1"
+  }
+}

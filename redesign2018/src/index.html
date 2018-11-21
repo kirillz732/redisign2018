@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<link href="/build/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />-->
+  <title>Training.by</title>
+  <!--<link rel="stylesheet" type="text/css" href="/build/style.css" />-->
+</head>
+
+<body>
+<div id="root" class="home-page">
+  
+  <header id="header">
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo logo--epam">
+          <a href="#" class="logo__image"></a>
+        </div>
+        <div class="logo logo--training-center">
+          <a href="#" class="logo__image"></a>
+        </div>
+      </div><!-- /.logo-container -->
+      
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#">Training List</a></li>
+          <li class="main-nav__item"><a href="#">News</a></li>
+          <li class="main-nav__item active"><a href="about.html">About</a></li>
+          <li class="main-nav__item"><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav><!-- /.main-nav -->
+      
+      <div class="header-controls">
+        <div class="header-control location-selector"> <!--To open location selector panel add class '&--expanded' -->
+          <a href="#" class="location-selector__globe"></a>
+          <div class="location-selector__panel">
+            <div class="location-selector__section">
+              <div class="location-selector__title">Websites</div>
+              <div class="location-selector__list languages-list">
+                <div class="location-selector__item"><a href="#">Global/English</a></div>
+                <div class="location-selector__item"><a href="#">Россия/Русский</a></div>
+                <div class="location-selector__item"><a href="#">Украина/Украинский</a></div>
+              </div><!-- /.location-selector__list -->
+            </div><!-- /.location-selector__section -->
+            <div class="location-selector__section">
+              <div class="location-selector__title">Social Media</div>
+              <div class="location-selector__list social-medias-list">
+                <div class="location-selector__item">
+                  <span class="item-title">Global</span>
+                  <div class="social-list">
+                    <a href="#" class="social-item social-item--facebook"></a>
+                    <a href="#" class="social-item social-item--twitter"></a>
+                    <a href="#" class="social-item social-item--linkedin"></a>
+                    <a href="#" class="social-item social-item--youtube"></a>
+                  </div>
+                </div><!-- /.location-selector__item -->
+                <div class="location-selector__item">
+                  <span class="item-title">Russia</span>
+                  <div class="social-list">
+                    <a href="#" class="social-item social-item--vk"></a>
+                    <a href="#" class="social-item social-item--facebook"></a>
+                    <a href="#" class="social-item social-item--twitter"></a>
+                    <a href="#" class="social-item social-item--linkedin"></a>
+                  </div>
+                </div><!-- /.location-selector__item -->
+                <div class="location-selector__item">
+                  <span class="item-title">Ukraine</span>
+                  <div class="social-list">
+                    <a href="#" class="social-item social-item--facebook"></a>
+                    <a href="#" class="social-item social-item--twitter"></a>
+                    <a href="#" class="social-item social-item--linkedin"></a>
+                  </div>
+                </div><!-- /.location-selector__item -->
+              </div><!-- /.location-selector__list -->
+            </div><!-- /.location-selector__section -->
+          </div><!-- /.location-selector__panel -->
+        </div><!-- /.header-control -->
+        <div class="header-control header-auth">
+          <a href="#" class="header-auth__signin"><span class="header-auth__signin-icon"></span>Sign In</a>
+          <!-- here appropriate stuff might be in future: logged in user photo, user nav, etc... -->
+        </div><!-- /.header-control -->
+      </div><!-- /.header-controls -->
+      
+      <div class="mobile-nav"><!-- To open mobile-nav add class 'mobile-nav--expanded' -->
+        <button class="mobile-nav__opener" aria-expanded="false">
+          Menu
+          <span class="mobile-nav__cross"></span>
+        </button>
+        <nav class="mobile-nav__dropdown">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#">Training List</a></li>
+            <li class="mobile-nav__item"><a href="#">News</a></li>
+            <li class="mobile-nav__item"><a href="#">About</a></li>
+            <li class="mobile-nav__item"><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav><!-- /.mobile-nav__dropdown -->
+      </div><!-- /.main-nav-mobile -->
+    </div><!-- /.container -->
+  </header><!-- /#header -->
+  
+  
+  <div class="hero-banner hero-banner--home">
+    <!-- The modificator of the class 'hero-banner' is changeable depending on the page type -->
+    <div class="container">
+      <div class="hero-banner__content">
+        <div class="hero-banner__heading">Jumpstart & Develop<br>Your Career with Us</div>
+        <!-- Element 'hero-banner__text' has to be here -->
+      </div>
+    </div><!-- /.container -->
+  </div><!-- /.hero-banner -->
+  
+  
+  <div class="training-list section-ui section-ui--bg-gray">
+    <section>
+      <div class="container">
+        <div class="section-ui__title">Trainings</div>
+        <div class="training-list__filters">
+          <div class="filters-container">
+            <!--
+							UI part of filter can be implemented with a library such as 'chosen' (currently used at training.by)
+							https://github.com/harvesthq/chosen
+							There is an opened question about the look of an active/opened filter. After it's solved,
+							we'll be able to establish the further approach.
+						-->
+            <div class="filter__item">
+              <div class="filter-field">
+                <div class="filter-field__title">Skills</div>
+                <div class="filter-field__input">
+                  <input type="text" placeholder="All skills" />
+                </div>
+                <div class="filter-field__arrow-icon"></div>
+              </div>
+            </div><!-- /.filter__item -->
+            
+            <div class="filter__item">
+              <div class="filter-field">
+                <div class="filter-field__title">Locations</div>
+                <div class="filter-field__input">
+                  <input type="text" placeholder="All countries" />
+                </div>
+                <div class="filter-field__arrow-icon"></div>
+              </div>
+            </div><!-- /.filter__item -->
+          </div><!-- /.filters-container -->
+        </div><!-- /.training-list__filters -->
+        
+        <div class="slider-component slider-component--trainings training-list__mobile">
+          <div class="slider__nav">
+            <div class="slider-arrow slider-arrow--prev"></div>
+            <div class="slider-arrow slider-arrow--next"></div>
+          </div><!-- /.slider__nav -->
+          
+          <div class="training-list__container slider__list">
+            <div class="training-item slider__item">
+              <div class="training-item__inner">
+                <div class="training-item__icons">
+                  <div class="training-icon training-icon--group"></div>
+                </div>
+                <div class="training-item__title">JavaScript Development</div>
+                <div class="training-item__location">Minsk, Belarus</div>
+                <div class="training-item__button">
+                  <a href="#" class="btn btn--blue">Register</a>
+                </div>
+              </div>
+            </div><!-- /.training-item -->
+          </div><!-- /.training-list__container -->
+        </div><!-- /.slider-component -->
+        
+        <div class="training-list__container training-list__desktop">
+          <div class="training-item">
+            <div class="training-item__inner">
+              <div class="training-item__icons">
+                <div class="training-icon training-icon--group"></div>
+              </div>
+              <div class="training-item__title">JavaScript Development</div>
+              <div class="training-item__location">Minsk, Belarus</div>
+              <div class="training-item__language">
+                
+                <!-- the svg below is a temporary solution, just for the demo -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                  <g fill="#FFF" fill-rule="nonzero">
+                    <path d="M20.166 5.382l-.324.103-1.725.155-.487.782-.354-.113-1.373-1.244-.2-.647-.266-.69-.863-.778-1.018-.2-.023.468.997.978.488.578-.549.288-.446-.132-.67-.28.023-.543-.878-.363-.292 1.275-.885.202.088.711 1.153.223.2-1.137.951.142.443.26h.71l.486.978 1.288 1.313-.094.51-1.04-.132-1.794.91-1.293 1.558-.168.69h-.464l-.864-.4-.84.4.21.89.365-.423.642-.02-.045.8.532.156.532.6.868-.245.99.157 1.152.31.575.069.974 1.111 1.882 1.112-1.217 2.336-1.284.6-.488 1.334-1.858 1.247-.198.719A10.863 10.863 0 0 0 22 11.435a10.87 10.87 0 0 0-1.834-6.053z"/>
+                    <path d="M11.445 15.274l-.748-1.384.686-1.428-.686-.204-.77-.773-1.708-.382-.566-1.184v.703h-.25L5.932 8.63V6.995l-1.079-1.75-1.712.304H1.988l-.58-.38.74-.586-.739.17A10.172 10.172 0 0 0 0 9.919c0 5.66 4.595 10.249 10.264 10.249.437 0 .865-.039 1.289-.09l-.108-1.241s.472-1.844.472-1.907c-.001-.063-.472-1.655-.472-1.655zM4.391 3.252l2.041-.25.94-.452 1.06.267 1.69-.082.58-.8.845.123 2.051-.17.566-.546.797-.468 1.128.15.411-.055A12.79 12.79 0 0 0 11.61 0C8.043 0 4.854 1.427 2.75 3.667h.006l1.635-.415zm7.704-2.25l1.173-.566.754.382-1.09.729-1.042.091-.47-.267.675-.368zm-3.475.084l.518.19.678-.19.37.561-1.566.361-.753-.386s.736-.416.753-.536z"/>
+                  </g>
+                </svg>
+                English
+              </div>
+              <div class="training-item__duration">
+                <div class="duration-calendar">2018-Aug</div>
+                <div class="duration-weeks">Weeks: 24</div>
+              </div>
+              <div class="training-item__button">
+                <a href="#" class="btn btn--blue">Register</a>
+              </div>
+            </div>
+          </div><!-- /.training-item -->
+          <div class="training-item">
+            <div class="training-item__inner">
+              <div class="training-item__icons">
+                <div class="training-icon training-icon--code"></div>
+              </div>
+              <div class="training-item__title">JavaScript Development</div>
+              <div class="training-item__location">Minsk, Belarus</div>
+              <div class="training-item__language">
+                
+                <!-- the svg below is a temporary solution, just for the demo -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                  <g fill="#FFF" fill-rule="nonzero">
+                    <path d="M20.166 5.382l-.324.103-1.725.155-.487.782-.354-.113-1.373-1.244-.2-.647-.266-.69-.863-.778-1.018-.2-.023.468.997.978.488.578-.549.288-.446-.132-.67-.28.023-.543-.878-.363-.292 1.275-.885.202.088.711 1.153.223.2-1.137.951.142.443.26h.71l.486.978 1.288 1.313-.094.51-1.04-.132-1.794.91-1.293 1.558-.168.69h-.464l-.864-.4-.84.4.21.89.365-.423.642-.02-.045.8.532.156.532.6.868-.245.99.157 1.152.31.575.069.974 1.111 1.882 1.112-1.217 2.336-1.284.6-.488 1.334-1.858 1.247-.198.719A10.863 10.863 0 0 0 22 11.435a10.87 10.87 0 0 0-1.834-6.053z"/>
+                    <path d="M11.445 15.274l-.748-1.384.686-1.428-.686-.204-.77-.773-1.708-.382-.566-1.184v.703h-.25L5.932 8.63V6.995l-1.079-1.75-1.712.304H1.988l-.58-.38.74-.586-.739.17A10.172 10.172 0 0 0 0 9.919c0 5.66 4.595 10.249 10.264 10.249.437 0 .865-.039 1.289-.09l-.108-1.241s.472-1.844.472-1.907c-.001-.063-.472-1.655-.472-1.655zM4.391 3.252l2.041-.25.94-.452 1.06.267 1.69-.082.58-.8.845.123 2.051-.17.566-.546.797-.468 1.128.15.411-.055A12.79 12.79 0 0 0 11.61 0C8.043 0 4.854 1.427 2.75 3.667h.006l1.635-.415zm7.704-2.25l1.173-.566.754.382-1.09.729-1.042.091-.47-.267.675-.368zm-3.475.084l.518.19.678-.19.37.561-1.566.361-.753-.386s.736-.416.753-.536z"/>
+                  </g>
+                </svg>
+                English</div>
+              <div class="training-item__duration">
+                <div class="duration-calendar">2018-Aug</div>
+                <div class="duration-weeks">Weeks: 24</div>
+              </div>
+              <div class="training-item__button">
+                <a href="#" class="btn btn--blue">Register</a>
+              </div>
+            </div>
+          </div><!-- /.training-item -->
+          <div class="training-item">
+            <div class="training-item__inner">
+              <div class="training-item__icons">
+                <div class="training-icon training-icon--analytics"></div>
+              </div>
+              <div class="training-item__title">Business Intelligence</div>
+              <div class="training-item__location">Minsk, Belarus</div>
+              <div class="training-item__language">
+                
+                <!-- the svg below is a temporary solution, just for the demo -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                  <g fill="#FFF" fill-rule="nonzero">
+                    <path d="M20.166 5.382l-.324.103-1.725.155-.487.782-.354-.113-1.373-1.244-.2-.647-.266-.69-.863-.778-1.018-.2-.023.468.997.978.488.578-.549.288-.446-.132-.67-.28.023-.543-.878-.363-.292 1.275-.885.202.088.711 1.153.223.2-1.137.951.142.443.26h.71l.486.978 1.288 1.313-.094.51-1.04-.132-1.794.91-1.293 1.558-.168.69h-.464l-.864-.4-.84.4.21.89.365-.423.642-.02-.045.8.532.156.532.6.868-.245.99.157 1.152.31.575.069.974 1.111 1.882 1.112-1.217 2.336-1.284.6-.488 1.334-1.858 1.247-.198.719A10.863 10.863 0 0 0 22 11.435a10.87 10.87 0 0 0-1.834-6.053z"/>
+                    <path d="M11.445 15.274l-.748-1.384.686-1.428-.686-.204-.77-.773-1.708-.382-.566-1.184v.703h-.25L5.932 8.63V6.995l-1.079-1.75-1.712.304H1.988l-.58-.38.74-.586-.739.17A10.172 10.172 0 0 0 0 9.919c0 5.66 4.595 10.249 10.264 10.249.437 0 .865-.039 1.289-.09l-.108-1.241s.472-1.844.472-1.907c-.001-.063-.472-1.655-.472-1.655zM4.391 3.252l2.041-.25.94-.452 1.06.267 1.69-.082.58-.8.845.123 2.051-.17.566-.546.797-.468 1.128.15.411-.055A12.79 12.79 0 0 0 11.61 0C8.043 0 4.854 1.427 2.75 3.667h.006l1.635-.415zm7.704-2.25l1.173-.566.754.382-1.09.729-1.042.091-.47-.267.675-.368zm-3.475.084l.518.19.678-.19.37.561-1.566.361-.753-.386s.736-.416.753-.536z"/>
+                  </g>
+                </svg>
+                English</div>
+              <div class="training-item__duration">
+                <div class="duration-calendar">2018-Aug</div>
+                <div class="duration-weeks">Weeks: 24</div>
+              </div>
+              <div class="training-item__button">
+                <a href="#" class="btn btn--green">Apply</a>
+              </div>
+            </div>
+          </div><!-- /.training-item -->
+          <div class="training-item">
+            <div class="training-item__inner">
+              <div class="training-item__icons">
+                <div class="training-icon training-icon--nut"></div>
+                <div class="training-icon training-icon--analysis"></div>
+              </div>
+              <div class="training-item__title">Business Analysis</div>
+              <div class="training-item__location">Minsk, Belarus</div>
+              <div class="training-item__language">
+                
+                <!-- the svg below is a temporary solution, just for the demo -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                  <g fill="#FFF" fill-rule="nonzero">
+                    <path d="M20.166 5.382l-.324.103-1.725.155-.487.782-.354-.113-1.373-1.244-.2-.647-.266-.69-.863-.778-1.018-.2-.023.468.997.978.488.578-.549.288-.446-.132-.67-.28.023-.543-.878-.363-.292 1.275-.885.202.088.711 1.153.223.2-1.137.951.142.443.26h.71l.486.978 1.288 1.313-.094.51-1.04-.132-1.794.91-1.293 1.558-.168.69h-.464l-.864-.4-.84.4.21.89.365-.423.642-.02-.045.8.532.156.532.6.868-.245.99.157 1.152.31.575.069.974 1.111 1.882 1.112-1.217 2.336-1.284.6-.488 1.334-1.858 1.247-.198.719A10.863 10.863 0 0 0 22 11.435a10.87 10.87 0 0 0-1.834-6.053z"/>
+                    <path d="M11.445 15.274l-.748-1.384.686-1.428-.686-.204-.77-.773-1.708-.382-.566-1.184v.703h-.25L5.932 8.63V6.995l-1.079-1.75-1.712.304H1.988l-.58-.38.74-.586-.739.17A10.172 10.172 0 0 0 0 9.919c0 5.66 4.595 10.249 10.264 10.249.437 0 .865-.039 1.289-.09l-.108-1.241s.472-1.844.472-1.907c-.001-.063-.472-1.655-.472-1.655zM4.391 3.252l2.041-.25.94-.452 1.06.267 1.69-.082.58-.8.845.123 2.051-.17.566-.546.797-.468 1.128.15.411-.055A12.79 12.79 0 0 0 11.61 0C8.043 0 4.854 1.427 2.75 3.667h.006l1.635-.415zm7.704-2.25l1.173-.566.754.382-1.09.729-1.042.091-.47-.267.675-.368zm-3.475.084l.518.19.678-.19.37.561-1.566.361-.753-.386s.736-.416.753-.536z"/>
+                  </g>
+                </svg>
+                English</div>
+              <div class="training-item__duration">
+                <div class="duration-calendar">2018-Aug</div>
+                <div class="duration-weeks">Weeks: 24</div>
+              </div>
+              <div class="training-item__button">
+                <a href="#" class="btn btn--blue">Register</a>
+              </div>
+            </div>
+          </div><!-- /.training-item -->
+        </div><!-- /.training-list__container -->
+        
+        <div class="training-list__more-trainings">
+          <a href="#" class="training-list__more-trainings-link">View more trainings <span>(16)</span></a>
+        </div><!-- /.training-list__more-trainings -->
+      </div><!-- /.container -->
+    </section>
+  </div><!-- /.training-list -->
+  
+  <div class="news-list section-ui">
+    <section>
+      <div class="container">
+        <div class="section-ui__title">News</div>
+        <div class="tab-component">
+          <div class="tab-nav">
+            <div class="tab-nav__list">
+              <div class="tab-nav__item active"><span>News</span></div>
+              <div class="tab-nav__item"><span>Success Stories</span></div>
+              <div class="tab-nav__item"><span>Materials</span></div>
+              <div class="tab-nav__item"><span>Videos</span></div>
+            </div><!-- /.tab-nav__list -->
+          </div><!-- /.tab-nav -->
+          <div class="tab-content">
+            <div class="tab-content__list">
+              <div class="tab-content__item">
+                <div class="slider-component slider-component--news">
+                  <div class="slider__nav">
+                    <div class="slider-arrow slider-arrow--prev"></div>
+                    <div class="slider-arrow slider-arrow--next"></div>
+                  </div><!-- /.slider__nav -->
+                  
+                  <div class="news-list__container slider__list">
+                    <div class="news-item slider__item">
+                      <div class="news-item__inner">
+                        <div class="news-item__image"><img src="images/news1-desktop@2x.jpg" /></div>
+                        <div class="news-item__category-name">Category Name</div>
+                        <div class="news-item__title"><a href="#">News Title News Title</a></div>
+                        <div class="news-item__description">Short description of the...</div>
+                      </div><!-- /.news-item__inner -->
+                    </div><!-- /.news-item -->
+                    <div class="news-item slider__item">
+                      <div class="news-item__inner">
+                        <div class="news-item__image"><img src="images/news2-desktop@2x.jpg" /></div>
+                        <div class="news-item__category-name">Category Name</div>
+                        <div class="news-item__title"><a href="#">News Title News Title</a></div>
+                        <div class="news-item__description">Short description of the...</div>
+                      </div><!-- /.news-item__inner -->
+                    </div><!-- /.news-item -->
+                    <div class="news-item slider__item">
+                      <div class="news-item__inner">
+                        <div class="news-item__image"><img src="images/news3-desktop@2x.jpg" /></div>
+                        <div class="news-item__category-name">Category Name</div>
+                        <div class="news-item__title"><a href="#">News Title News Title</a></div>
+                        <div class="news-item__description">Short description of the...</div>
+                      </div><!-- /.news-item__inner -->
+                    </div><!-- /.news-item -->
+                    <div class="news-item slider__item">
+                      <div class="news-item__inner">
+                        <div class="news-item__image"><img src="images/news4-desktop@2x.jpg" /></div>
+                        <div class="news-item__category-name">Category Name</div>
+                        <div class="news-item__title"><a href="#">News Title News Title</a></div>
+                        <div class="news-item__description">Short description of the...</div>
+                      </div><!-- /.news-item__inner -->
+                    </div><!-- /.news-item -->
+                  </div><!-- /.news-list__container -->
+                </div><!-- /.slider-component -->
+              
+              </div><!-- /.tab-content__item -->
+              
+              <!-- <div class="tab-content__item">-->
+              <!-- Another content tab, eg. Success stories -->
+              <!--</div><!-- /.tab-content__item -->
+            
+            </div><!-- /.tab-content__list -->
+          </div><!-- /.tab-content -->
+        </div><!-- /.tab-component -->
+        
+        <div class="news-list__all-news">
+          <a href="#" class="news-list__all-news-link">All News</a>
+        </div><!-- /.news-list__all-news -->
+      
+      </div><!-- /.container -->
+    </section>
+  </div><!-- /.news-list -->
+  
+  <section class="talk-to-us section-ui">
+    <div class="container">
+      <div class="section-ui__title">Want to talk to us about your business?</div>
+      <div class="section-ui__text">We'd like to here from you!</div>
+      <div class="talk-to-us__button">
+        <a href="#" class="btn btn--blue">Contact Us</a>
+      </div>
+      <!-- /.section-ui__text -->
+    </div><!-- /.container -->
+  </section><!-- /.talk-to-us section-ui -->
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-copyrights">
+        <p>© 2018. EPAM Systems, Inc.<span class="hidden-xs hidden-sm"><br></span>All Rights Reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="#">Investor relations</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#">Contact</a>
+          </li>
+          <li class="footer-nav__item footer-nav__item--active">
+            <a href="#">Privacy policy</a>
+          </li>
+        </ul>
+      </nav><!-- /.footer-nav -->
+      <div class="footer-socials">
+        <div class="social-list">
+          <a href="#" class="social-item social-item--twitter"><span class="a11y-only">Twitter</span></a>
+          <a href="#" class="social-item social-item--facebook"><span class="a11y-only">Facebook</span></a>
+          <a href="#" class="social-item social-item--linkedin"><span class="a11y-only">Linkedin</span></a>
+          <a href="#" class="social-item social-item--google"><span class="a11y-only">Google+</span></a>
+        </div>
+      </div><!-- /.footer-socials -->
+    </div><!-- /.container -->
+  </footer><!-- /#footer -->
+  
+  <div class="special-components">
+    <!-- fixed positined, modal forms, etc components here ... -->
+    <div class="ask-question hidden">
+      <a href="#" class="ask-question__button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18">
+          <path fill="#FFF" fill-rule="nonzero" d="M5.754 0C8.9 0 12 1.434 12 4.864c0 3.162-3.664 4.379-4.45 5.522-.592.85-.394 2.044-2.017 2.044-1.058 0-1.574-.85-1.574-1.629 0-2.896 4.302-3.552 4.302-5.937 0-1.313-.883-2.09-2.36-2.09-3.147 0-1.918 3.209-4.302 3.209C.74 5.983 0 5.473 0 4.5 0 2.114 2.753 0 5.754 0zM5.63 14.01c1.105 0 2.017.898 2.017 1.995C7.648 17.1 6.738 18 5.63 18c-1.106 0-2.017-.898-2.017-1.995 0-1.096.91-1.996 2.017-1.996z"/>
+        </svg>
+      </a>
+    </div><!-- /.ask-question -->
+    <script>
+      // The code below is just for testing/demo purposes, as a showcase of correct work of the ask-question component
+      window.onscroll = function() {
+        var el = document.querySelector(".ask-question");
+        if (document.documentElement.scrollTop > 900) {
+          el.classList.remove("hidden");
+        } else {
+          el.classList.add("hidden");
+        }
+      }
+    </script>
+  
+  <div class="overlayout">
+
+      <div class="popup popup--reg">
+        <div class="popup-wrapper">
+          <div class="popup__header ">
+            <div class="popup-title popup__container">
+              <div class="popup-title__logo"></div>
+              <div class="popup-title__name">Registration</div>
+              <div class="popup-title__close"></div>
+            </div>
+          </div>
+          <div class="popup__body">
+            <form class="popup-reg__form popup-reg-form popup__container" action="https://training.by/Auth/Login" method="post">
+              <div class="popup-reg-form__email">
+                <input class="popup-reg-form-email__field" type="email" name="email" id="email" placeholder="mail@example.com"
+                  size="32" />
+              </div>
+              <div class="popup-reg-form__password">
+                <input class="popup-reg-form-password__field" type="password" required placeholder="password">
+              </div>
+              <input class="popup-reg-form__sign-in" type="submit" value="Sign in">
+            </form>
+            <div class="popup-reg__footer popup__container popup-reg-footer">
+              <div class="popup-reg-footer__actions">
+                <a class="popup-reg-footer-actions__forgot" href="#">Forgot our password?</a>
+                <a class="popup-reg-footer-actions__register" href="#">Register!</a>
+              </div>
+              <div class="popup-reg-footer__divider popup-reg-footer-divider">
+                <span class="popup-reg-footer-divider__line"></span>
+                <span class="popup-reg-footer-divider__phrase">Or</span>
+                <span class="popup-reg-footer-divider__line"></span>
+              </div>
+              <div class="popup-reg-footer__social reg-footer-social ">
+                <a href="#" class="reg-footer-social-item reg-footer-social-item--facebook"><span class="a11y-only">Facebook</span></a>
+                <a href="#" class="reg-footer-social-item reg-footer-social-item--google"><span class="a11y-only">Google+</span></a>
+                <a href="#" class="reg-footer-social-item reg-footer-social-item--epam"><span class="title">Epam Login</span></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.special-components -->
+
+
+</div><!-- /#root -->
+</body>
+</html>

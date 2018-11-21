@@ -1,0 +1,212 @@
+// Responsive Breakpoints
+$viewport-phone-min: 320px;
+$viewport-phone-max: 767px;
+$viewport-tablet-portrait-min: 768px;
+$viewport-tablet-portrait-max: 991px;
+$viewport-tablet-landscape-min: 992px;
+$viewport-tablet-landscape-max: 1239px;
+$viewport-desktop-min: 1240px;
+
+//Container sizes
+$container-paddings: 0 15px;
+$container-phone: auto;
+$container-tablet-portrait: 750px;
+$container-tablet-landscape: 970px;
+$container-desktop: 1200px;
+$circle-bgr-radius: 50%;
+
+//header
+$header-bg: #77ced9;
+$header-desktop-height: 68px;
+
+// Colors
+$text-color: #333;
+$bg-color: #fff;
+$light-blue: #77ced9;
+$yellow-green: #cfdc54;
+$salmon-red: #eb5d48;
+$dark-blue: #307fb6;
+$header-bg: #77ced9;
+
+
+//vars for links
+$links-color: #333;
+$links-color: #76cdd8;
+$links-color-active: #7bbbc6;
+
+//vars for input
+$input-padding: 5px 10px;
+
+//vars for btns
+$btn-border-radius: 6px;
+$btn-font-color: #fff;
+$btn-blue-bgr-color: #76cdd8;
+$btn-blue-bgr-hover: #7bbbc6;
+$btn-green-bgr-color: #cedb56;
+$btn-green-bgr-hover: #c5cf62;
+
+//vars for accordion-faq
+$accordion-faq-cross-color: #008ace;
+$accordion-faq-margin: 13px 0 0 0;
+$accordion-item-last-child-margin: 0 0 70px 0;
+$accordion-item-opener-width: 18px;
+$accordion-item-opener-border-width: 4.3px;
+$accordion-item-opener-position-right: 0;
+$accordion-item-opener-margin: 0 0 0 27px;
+$accordion-item-question-height: 22px;
+$accordion-item-question-height-mobile: 110px;
+$accordion-item-question-font-size: 17px;
+$accordion-item-question-font-weight: 900;
+$accordion-item-question-padding: 30px 0 30px 0;
+$accordion-item-border-bottom-color: #ccc;
+$accordion-item-border-bottom-width: 1px;
+$faq-answer-font-size: 17px;
+$accordion-mob-item-answer-margin: -10px 0 30px 0;
+$accordion-item-answer-margin: -20px 0 30px 0;
+$accordion-speed-animation: 0.3s;
+
+//vars for breadcrumb section
+$breadcrumb-padding: 30px 0 30px 0;
+$breadcrumb-item-margin: 0 20px 0 0;
+$breadcrumb-links-color: #000;
+$breadcrumb-links-font-size: 14px;
+$breadcrumb-item-pseudo-width: 20px;
+$breadcrumb-item-pseudo-height: 20px;
+$breadcrumb-item-pseudo-top: 0;
+$breadcrumb-item-pseudo-right: -30px;
+$breadcrumb-item-pseudo-content: '›';
+
+//vars for hero-banner section
+$banner-text-width: 650px;
+$banner-text-width-tablet: 419px;
+$banner-text-font-size: 18px;
+$banner-text-padding: 20px;
+$hero-banner-bgr-about: linear-gradient(rgba(0, 78, 90, 0.35), rgba(0, 78, 90, 0.35)), url(../images/about-banner@2x.jpg) center no-repeat;
+$section-title-font-size: 29px;
+
+//vars for history-section
+$history-section-top-padding: 40px;
+$history-section-bottom-padding: 50px;
+$history-title-margin: 46px;
+$history-tablet-title-margin: 50px;
+$history-phone-title-margin: 40px;
+$history-period-width: 127px;
+$history-period-width-tablet: 33%;
+$history-period-width-tablet-portrait: 46%;
+$history-period-width-phone: 85%;
+$history-year-padding: 20px 0 10px;
+$timeline-width: 100%;
+$timeline-height: 4px;
+$timeline-bgr: #464547;
+$timeline-point-size: 12px;
+$timeline-year-size: 18px;
+
+//vars for join-us-section
+$tab-content-size: 650px;
+$tab-content-tablet-size: 400px;
+$tab-content-phone-size: 300px;
+$tab-bgr-student: linear-gradient(rgba(118, 205, 216, 0.95), rgba(118, 205, 216, 0.95)), url(../images/pattern-student-desk.jpg) center repeat;
+$tab-bgr-interview: linear-gradient(rgba(201, 220, 73, 0.92), rgba(201, 220, 73, 0.92)), url(../images/pattern-interview-desk.jpg) center repeat;
+$tab-bgr-training: linear-gradient(rgba(47, 125, 181, 0.98), rgba(47, 125, 181, 0.98)), url(../images/pattern-training-desk.jpg) center repeat;
+$tab-bgr-work: linear-gradient(rgba(241, 92, 67, 0.95), rgba(241, 92, 67, 0.95)), url(../images/pattern-work.jpg) center repeat;
+
+$phone-tab-bgr-student: linear-gradient(rgba(118, 205, 216, 0.95), rgba(118, 205, 216, 0.95)), url(../images/pattern-student-mob.jpg) center repeat;
+$phone-tab-bgr-interview: linear-gradient(rgba(201, 220, 73, 0.92), rgba(201, 220, 73, 0.92)), url(../images/pattern-interview-mob.jpg) center repeat;
+$phone-tab-bgr-training: linear-gradient(rgba(47, 125, 181, 0.98), rgba(47, 125, 181, 0.98)), url(../images/pattern-training-mob.jpg) center repeat;
+
+$tab-item-margin: 30px;
+$slider-text-color: #fff;
+$step-img-bgr-color: #fff;
+$step-list-description: 24px;
+$step-circle-margin: 20px;
+$step-description-font: 20px;
+$step-description-margin: 63px;
+$step-img-bgr-size: 140px;
+$step-img-bgr-tablet-size: 100px;
+$step-svg-container-size: 170px;
+$step-svg-container-tablet-size: 120px;
+$step-item-training-padding: 15px;
+$step-arrows-width: 47px;
+$step-arrows-height: 39px;
+$step-lines-color: rgba(255, 255, 255, 0.4);
+$tablet-slider-item-width: 22%;
+$tablet-portrait-slider-item-width: 30%;
+$phone-slider-item-width: 216px;
+$steps-descr-height-odd: 50px;
+$steps-descr-height-odd-work: 80px;
+$steps-title-margin: 65px;
+$steps-descr-height-even: 95px;
+$steps-descr-height: 88px;
+
+//vars for map-section
+$map-section-font: 18px;
+$map-section-tablet-font: 16px;
+$map-streets-tablet-font: 14px;
+$map-bgr-color: #f3f3f3;
+$map-active-color: #fff;
+$map-img-height: 700px;
+$map-img-tablet-height: 500px;
+$map-img-tablet-portrait-height: 400px;
+$country-border-size: 1px;
+$country-item-width: 293px;
+$country-item-tablet-width: 235px;
+$country-item-tablet-portrait-width: 160px;
+$country-first-item-tablet-portrait: 240px;
+$cities-font-color: #9f9f9f;
+$cities-phone-arrows-color: #9f9f9f;
+$cities-phone-arrows-color-hover: #464547;
+$cities-phone-arrows-size: 7px;
+$cities-padding: 30px;
+$cities-phone-padding: 15px;
+$cities-tablet-padding-left: 20px;
+$mobile-map-link-width: 50px;
+$mobile-map-link-arrow-width: 5px;
+$mobile-map-link-arrow-right: 1%;
+
+//vars for popup-registration
+$popup-btn-facebook-color: #6582bd;
+$popup-btn-facebook-hover-color: #4565a4;
+$popup-btn-google-color: #e47c6d;
+$popup-btn-google-hover-color:#c75948;
+$popup-btn-epam-color: #cfdc54;
+$popup-btn-epam-hover-color:#bac935;
+$popup-btn-sign-in-bg: #76cdd8;
+$popup-btn-text-color: #fff;
+$popup-btn-font-size: 15px;
+$popup-btn-height: 40px;
+$popup-btn-width: 100%;
+$popup-btn-border-radius: 6px;
+$popup-btn-sign-in-bg-margin: 10px 0;
+$popup-divider-color:#ccc;
+$popup-divider-margin: 30px 0;
+$popup-footer-actions-color:#818181;
+$popup-field-pseudo-position-top: 13px;
+$popup-field-height: 40px;
+$popup-field-width: 100%;
+$popup-password-field-margin-bottom:10px;
+$popup-other-actions-font-size:14px;
+$popup-footer-divider-phrase: 16px;
+$popup-field-pseudo-widht:18px;
+$popup-field-pseudo-height:18px;
+$popup-mob-field-pseudo-position-right: 10px;
+$popup-mob-field-pseudo-widht:16px;
+$popup-mob-field-pseudo-height:16px;
+$popup-field-padding:11px 30px 11px 15px;
+$popup-mob-field-padding: 11px 25px 11px 10px;
+$popup-btn-epam-arrow-side: 9px;
+$popup-btn-epam-arrow-position-top: 6px;
+$popup-btn-epam-arrow-position-right: 4px;
+$popup-btn-epam-margin:20px 0 84px 0;
+
+//vars for popup base
+$popup-wrapper-height: 568px;
+$popup-wrapper-width: 360px;
+$popup-container-width: 320px;
+$popup-container-margin: 0 20px;
+$popup-mob-wrapper-width: 320px;
+$popup-mob-container-width: 290px;
+$popup-mob-container-margin: 0 15px;
+$popup-border-radius-header: 10px 10px 0 0;
+$popup-border-radius-body: 0 0 10px 10px;
+$popup-body-color: #fff;
+$popup-close-side: 20px;
