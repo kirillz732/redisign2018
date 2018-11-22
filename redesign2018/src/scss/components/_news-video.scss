@@ -1,48 +1,125 @@
-.news-video{
-  display: flex;
-  background: #d8d8d8;
+.news-video {
+  background: #818181;
 
-  &__icons{
-    margin-left: auto;
+  .container {
+    display: flex;
+    position: relative;
   }
 
-  &--vk{
-    width: 17px;
-    height: 17px;
+.container__links{
+  margin-left: 135px;
+  max-width: 270px;
+  width: auto;
+}
+
+  &__icons {
+    padding-left: 70px;
   }
 
-  &--linkedin{
-    width: 17px;
-    height: 17px;
+  &__icons:after {
+    display: inline-block;
+    content: '';
+    width: 270px;
+    height: 1px;
+    background: #d8d8d8;
+    margin-top: 20px;
+    transform: translateX(-74px);
   }
 
-  &--facebook{
-    width: 10px;
-    height: 17px;
+  &__info-text {
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    color: #000000;  }
+
+  &__links-indent {
+    margin-bottom: 15px;
   }
 
-  &--twitter{
-    width: 17px;
-    height: 15px;
+  .color-lincs {
+    color: #0c0c0c;
   }
 
-  &__content{
-    margin-left: auto;
+  //.color-lincs:visited {
+  //  color: #76cdd8;
+  //}
+
+  .color-lincs:hover {
+    color: #76cdd8;
   }
-  &__heading {
-    @extend %museo-slab-500;
-    margin-top: 70px;
-    width: 241px;
-    height: 31px;
-    font-size: 25px;
-    font-weight: 900;
+
+  &__circle {
+    list-style-type: disc;
+    padding-left: 15px;
+    color: #0c0c0c;
+  }
+
+  &__links-title {
+    padding-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 23px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #0089cf;
+  }
+
+  &__all-news {
+    margin-top: 5px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center;
-    color: #76cdd7;
+    color: #c8da48;
   }
 
+  .social-item {
+    display: flex;
+    margin-right: 20px;
+
+    &--vk {
+      &:before {
+        margin-top: 7px;
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    &--linkedin {
+      &:before {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    &--facebook {
+      &:before {
+        width: 10px;
+        height: 17px;
+      }
+    }
+
+    &--twitter {
+      &:before {
+        width: 17px;
+        height: 15px;
+      }
+    }
+  }
+
+  &__heading {
+    @extend %museo-slab-500;
+    height: 31px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #76cdd7;
+  }
 
 }

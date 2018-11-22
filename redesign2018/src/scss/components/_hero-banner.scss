@@ -70,16 +70,17 @@ $hero-banner-text-size-phone: 19px;
   }
 
   &--news-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background: #ffffff;
     color: #000000;
-    height: 236px;
-    margin-top: 70px;
+    height: 355px;
 
     .hero-banner__heading {
-      font-size: 54px;
       font-weight: 300;
       line-height: 1.22;
-      height: 132px;
       color: #000000;
     }
 
@@ -89,7 +90,7 @@ $hero-banner-text-size-phone: 19px;
       width: 100%;
       height: 1px;
       background: #000;
-      margin-top: 100px;
+      margin-top: 90px;
     }
   }
 }
